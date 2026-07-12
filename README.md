@@ -69,7 +69,7 @@
 - [❔ FAQ](#-faq)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
-- [📬 Contact](#-contact)
+- [👤 Created & Maintained By](#-created--maintained-by)
 
 </details>
 
@@ -409,19 +409,33 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 
 <br/>
 
-## 📬 Contact
+## 👤 Created & Maintained By
 
-<a href="https://github.com/Biswajitpa">
-  <img src="https://github.com/Biswajitpa.png" width="80" style="border-radius:50%;" />
-</a>
+<div align="center">
+
+<img src="https://github.com/Biswajitpa.png" width="140" style="border-radius:50%; border: 3px solid #2F5CFF;" />
+
+<br/><br/>
+
+[![Author](https://img.shields.io/badge/AUTHOR-Biswajit%20Pattanaik-2F5CFF?style=for-the-badge&logo=github&logoColor=white&labelColor=333333)](https://github.com/Biswajitpa)
+
+<br/>
 
 **Biswajit Pattanaik**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Biswajitpa-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Biswajitpa)
+*Building AI-powered agentic systems, one workflow at a time* 🚀
 
-Feel free to reach out via GitHub Issues for questions, feedback, or collaboration.
+[@Biswajitpa](https://github.com/Biswajitpa)
 
-Project Link: [https://github.com/yourusername/resume-genie](https://github.com/yourusername/resume-genie)
+<br/>
+
+⭐ If this project helped you, consider giving it a star — it goes a long way!
+<br/>
+🐛 Found a bug or have an idea? Issues and pull requests are always welcome.
+<br/>
+💛 Open to feedback, collaboration, and discussion.
+
+</div>
 
 <br/>
 
