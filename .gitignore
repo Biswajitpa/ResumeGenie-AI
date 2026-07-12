@@ -1,0 +1,27 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Build
+build/
+dist/
+
+# Streamlit
+.streamlit/secrets.toml
+
+AI_Career_Coach (Colab).ipynb
+Cover_Letter_Generator (Colab).ipynb
+Resume_Checker (Colab).ipynb
+Resume_Scorer (Colab).ipynb
