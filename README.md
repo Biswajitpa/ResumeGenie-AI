@@ -28,7 +28,7 @@
 <br/>
 
 <p>
-  <a href="https://resume-genie.streamlit.app"><b>🚀 Live Demo</b></a> ·
+  <a href="https://resumegenie-ai-lxixnkbibbpj8r22qcvv7z.streamlit.app/"><b>🚀 Live Demo</b></a> ·
   <a href="../../issues/new?labels=bug">🐞 Report Bug</a> ·
   <a href="../../issues/new?labels=enhancement">✨ Request Feature</a> ·
   <a href="#-getting-started">📦 Quick Start</a>
