@@ -1,6 +1,15 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2F5CFF,50:6B4FE0,100:C9A24B&height=220&section=header&text=Resume%20Genie&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=32&desc=Your%20Resume.%20Engineered%20for%20Every%20Job.&descAlignY=52&descSize=20" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,35:203A43,70:2C5364,100:C9A24B&height=220&section=header&text=Resume%20Genie&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=32&desc=Your%20Resume.%20Engineered%20for%20Every%20Job.&descAlignY=52&descSize=20" width="100%"/>
+
+<br/>
+
+<a href="https://github.com/Biswajitpa">
+  <img src="https://github.com/Biswajitpa.png" width="110" style="border-radius:50%; border: 3px solid #2F5CFF;" />
+</a>
+
+<br/>
+<sub><b>Built by <a href="https://github.com/Biswajitpa">Biswajit Pattanaik</a></b></sub>
 
 <br/>
 
@@ -402,7 +411,13 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ## 📬 Contact
 
+<a href="https://github.com/Biswajitpa">
+  <img src="https://github.com/Biswajitpa.png" width="80" style="border-radius:50%;" />
+</a>
+
 **Biswajit Pattanaik**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Biswajitpa-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Biswajitpa)
 
 Feel free to reach out via GitHub Issues for questions, feedback, or collaboration.
 
@@ -414,6 +429,6 @@ Project Link: [https://github.com/yourusername/resume-genie](https://github.com/
 
 ### ⭐ If this project helped you, consider giving it a star!
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:C9A24B,50:6B4FE0,100:2F5CFF&height=150&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:C9A24B,30:2C5364,65:203A43,100:0F2027&height=150&section=footer" width="100%"/>
 
 </div>
