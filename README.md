@@ -4,15 +4,6 @@
 
 <br/>
 
-<a href="https://github.com/Biswajitpa">
-  <img src="https://github.com/Biswajitpa.png" width="110" style="border-radius:50%; border: 3px solid #2F5CFF;" />
-</a>
-
-<br/>
-<sub><b>Built by <a href="https://github.com/Biswajitpa">Biswajit Pattanaik</a></b></sub>
-
-<br/>
-
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Sora&weight=700&size=24&pause=1200&color=2F5CFF&center=true&vCenter=true&width=700&lines=Land+the+interview%2C+not+just+the+application.;Tailored+cover+letters+in+under+10+seconds.;Honest+ATS+scoring.+Zero+sugar-coating.;A+career+coach+that+actually+read+your+resume.;Powered+by+Groq+%E2%80%94+the+fastest+inference+on+the+planet.)](https://git.io/typing-svg)
 
 <br/>
