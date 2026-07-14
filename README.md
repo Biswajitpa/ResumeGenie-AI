@@ -220,20 +220,7 @@ flowchart TD
 
 <br/>
 
-## 📸 Screenshots
 
-<div align="center">
-
-| Cover Letter Generator | Resume-JD Matcher |
-
-<img width="1527" height="596" alt="image" src="https://github.com/user-attachments/assets/a51004ae-21d8-48d0-95f7-54b4f68a8e09" />
-
-<img width="1536" height="668" alt="image" src="https://github.com/user-attachments/assets/b1ecf410-d53b-4677-ac94-68daee0ef316" />
-
-
-| Resume Checker | Career Coach Chat |
-<img width="1522" height="652" alt="image" src="https://github.com/user-attachments/assets/299998a2-ea82-41da-b17f-17cbfd3e78a8" />
-<img width="1533" height="626" alt="image" src="https://github.com/user-attachments/assets/6c5dd8f3-d661-4ee9-ae9f-d096bf9d3087" />
 
 
 </div>
