@@ -95,7 +95,6 @@ section[data-testid="stSidebar"] {
     overflow: hidden;
 }
 
-/* Slow-moving ambient glow sweep behind sidebar content — subtle, not rainbow */
 section[data-testid="stSidebar"]::before {
     content: "";
     position: absolute;
@@ -131,7 +130,6 @@ section[data-testid="stSidebar"] .stCaption, section[data-testid="stSidebar"] sm
     color: var(--text-2) !important;
 }
 
-/* Animated shimmering logo text */
 .sidebar-logo {
     font-family: 'Sora', sans-serif;
     font-size: 18px;
@@ -148,7 +146,6 @@ section[data-testid="stSidebar"] .stCaption, section[data-testid="stSidebar"] sm
     to { background-position: -250% center; }
 }
 
-/* Small orbiting dot motion graphic beside the logo */
 .sidebar-brand-row { display: flex; align-items: center; gap: 10px; margin-bottom: 2px; }
 .orbit {
     position: relative;
@@ -176,7 +173,6 @@ section[data-testid="stSidebar"] .stCaption, section[data-testid="stSidebar"] sm
     to { transform: rotate(360deg); }
 }
 
-/* Active nav item indicator — animated pulse dot */
 .nav-pulse {
     display: inline-block;
     width: 6px; height: 6px;
@@ -192,7 +188,6 @@ section[data-testid="stSidebar"] .stCaption, section[data-testid="stSidebar"] sm
     100% { box-shadow: 0 0 0 0 rgba(33,192,138,0); }
 }
 
-/* Animated divider line in sidebar */
 .sidebar-divider {
     height: 1px;
     width: 100%;
@@ -205,14 +200,12 @@ section[data-testid="stSidebar"] .stCaption, section[data-testid="stSidebar"] sm
     to { background-position: -200% center; }
 }
 
-/* ---------- SUBTLE ENTRANCE (restrained, single pass) ---------- */
 @keyframes riseIn {
     0%   { opacity: 0; transform: translateY(10px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 .block-container { animation: riseIn 0.45s ease-out; }
 
-/* ---------- TYPOGRAPHY ---------- */
 h1, h2, h3 { font-family: 'Sora', sans-serif !important; color: var(--text-1) !important; letter-spacing: -0.01em; }
 h1 { font-weight: 800 !important; }
 h2, h3 { font-weight: 700 !important; }
@@ -237,7 +230,6 @@ p, span, label, .stMarkdown, div { color: var(--text-1); }
     box-shadow: 0 0 0 3px rgba(33,192,138,0.18);
 }
 
-/* ---------- HERO PANEL ---------- */
 .hero-panel {
     border: 1px solid var(--border);
     background:
@@ -287,22 +279,19 @@ p, span, label, .stMarkdown, div { color: var(--text-1); }
     background: rgba(255,255,255,0.02);
 }
 
-/* ---------- TOOL CARDS ---------- */
-/* Streamlit's native bordered container (st.container(border=True)) restyled
-   to match the surface/border tokens, so content actually renders inside the
-   box instead of next to an empty one. */
 div[data-testid="stVerticalBlockBorderWrapper"] > div[data-testid="stVerticalBlock"] {
     border: 1px solid var(--border);
     background: var(--surface);
     border-radius: 12px;
     padding: 18px 20px 6px 20px;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.25s ease, transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.28s ease;
 }
 div[data-testid="stVerticalBlockBorderWrapper"]:hover > div[data-testid="stVerticalBlock"] {
     border-color: var(--border-strong);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 34px rgba(0,0,0,0.32), 0 0 0 1px rgba(255,255,255,0.03);
 }
 
-/* ---------- BUTTONS — solid, disciplined, one accent ---------- */
 .stButton > button, .stDownloadButton > button {
     background: var(--accent) !important;
     color: #FFFFFF !important;
@@ -329,7 +318,6 @@ div[data-testid="stVerticalBlockBorderWrapper"]:hover > div[data-testid="stVerti
     outline-offset: 2px;
 }
 
-/* ---------- FILE UPLOADER ---------- */
 [data-testid="stFileUploaderDropzone"] {
     background: var(--surface) !important;
     border: 1px dashed var(--border-strong) !important;
@@ -341,7 +329,6 @@ div[data-testid="stVerticalBlockBorderWrapper"]:hover > div[data-testid="stVerti
     background: var(--surface-2) !important;
 }
 
-/* ---------- INPUTS ---------- */
 .stTextArea textarea, .stTextInput input {
     background: var(--surface) !important;
     color: var(--text-1) !important;
@@ -354,7 +341,6 @@ div[data-testid="stVerticalBlockBorderWrapper"]:hover > div[data-testid="stVerti
     box-shadow: 0 0 0 3px rgba(47,92,255,0.16) !important;
 }
 
-/* ---------- SIDEBAR NAV (radio) ---------- */
 [data-testid="stSidebar"] .stRadio > label { display: none; }
 [data-testid="stSidebar"] .stRadio [role="radiogroup"] { gap: 4px; display: flex; flex-direction: column; }
 [data-testid="stSidebar"] .stRadio label {
@@ -381,13 +367,11 @@ div[data-testid="stVerticalBlockBorderWrapper"]:hover > div[data-testid="stVerti
     animation: navPulse 2.4s ease-out infinite;
 }
 
-/* ---------- ALERTS ---------- */
 div[data-testid="stAlert"] {
     border-radius: 10px;
     border: 1px solid var(--border);
 }
 
-/* ---------- STATUS / LOADING BAR (signature: "verification scan") ---------- */
 .scan-wrap {
     border: 1px solid var(--border);
     background: var(--surface);
@@ -430,7 +414,6 @@ div[data-testid="stAlert"] {
     100% { transform: translateX(350%); }
 }
 
-/* ---------- RESULT / VERIFICATION BADGE ---------- */
 .verify-card {
     border: 1px solid var(--border-strong);
     background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
@@ -465,7 +448,6 @@ div[data-testid="stAlert"] {
     color: var(--good);
 }
 
-/* ---------- FOOTER ---------- */
 .genie-footer {
     margin-top: 30px;
     padding: 14px 18px;
@@ -483,13 +465,10 @@ div[data-testid="stAlert"] {
     color: var(--text-2);
 }
 
-/* ---------- SCROLLBAR ---------- */
 ::-webkit-scrollbar { width: 9px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 8px; border: 1px solid var(--border); }
 
-/* ---------- AMBIENT PARTICLE FIELD ---------- */
-/* Slow-drifting motes across the whole app — depth without noise */
 .bg-particles {
     position: fixed;
     inset: 0;
@@ -524,9 +503,6 @@ div[data-testid="stAlert"] {
     100% { transform: translate(24px, -108vh); opacity: 0; }
 }
 
-/* ---------- SIGNATURE MOTIF: FLYING DOCUMENT ---------- */
-/* A resume, sent — arcs across the hero once per load, banking like a paper plane
-   finding its destination. This is the one bold moment; everything else stays quiet. */
 .flight-path {
     position: absolute;
     top: 14px; left: 0;
@@ -571,16 +547,6 @@ div[data-testid="stAlert"] {
     100% { opacity: 0; }
 }
 
-/* ---------- CARD LIFT (premium hover weight) ---------- */
-div[data-testid="stVerticalBlockBorderWrapper"] > div[data-testid="stVerticalBlock"] {
-    transition: border-color 0.25s ease, transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.28s ease;
-}
-div[data-testid="stVerticalBlockBorderWrapper"]:hover > div[data-testid="stVerticalBlock"] {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 34px rgba(0,0,0,0.32), 0 0 0 1px rgba(255,255,255,0.03);
-}
-
-/* ---------- IDLE-FLOATING BADGES ---------- */
 .hero-badges .badge {
     animation: badgeBob 4.5s ease-in-out infinite;
 }
@@ -592,19 +558,12 @@ div[data-testid="stVerticalBlockBorderWrapper"]:hover > div[data-testid="stVerti
     50%      { transform: translateY(-3px); }
 }
 
-/* ---------- BUTTON CENTERING ---------- */
 div[data-testid="stButton"], div[data-testid="stDownloadButton"] {
     display: flex;
     justify-content: center;
     margin: 10px 0;
 }
 
-/* ---------- BUTTON LAUNCH MICRO-INTERACTION ---------- */
-.stButton > button::after, .stDownloadButton > button::after {
-    content: "";
-}
-
-/* ---------- REDUCED MOTION ---------- */
 @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
     .flight-path, .flight-trail, .bg-particles { display: none !important; }
@@ -661,6 +620,19 @@ def verify_badge(title: str, subtitle: str, tag: str = "COMPLETE"):
     """, unsafe_allow_html=True)
 
 
+def model_error_box(err: Exception):
+    """Friendly error box for LLM call failures (bad model id, rate limits, etc)."""
+    st.error(
+        "⚠️ **The AI request failed.**\n\n"
+        "This usually means the configured Groq model is no longer available, your API key "
+        "doesn't have access to it, or you've hit a rate limit.\n\n"
+        f"**Details:** `{err}`\n\n"
+        "Check the current supported models at "
+        "[console.groq.com/docs/models](https://console.groq.com/docs/models) and update "
+        "`GROQ_MODEL_CANDIDATES` near the top of this file if needed."
+    )
+
+
 # ───────────────────────────────────────────────
 # SIDEBAR BRANDING
 # ───────────────────────────────────────────────
@@ -698,13 +670,57 @@ if not GROQ_API_KEY:
     st.error("❌ **GROQ_API_KEY missing**. Add to `.env` file or `.streamlit/secrets.toml`.")
     st.stop()
 
+# ───────────────────────────────────────────────
+# MODEL SELECTION — resilient to Groq deprecating/renaming models
+#
+# Groq periodically retires or renames models, which turns into a
+# groq.NotFoundError (404) at request time with no advance warning.
+# Instead of hardcoding one model string, we try a short list of
+# current-generation candidates in order and use the first one that
+# actually responds. If Groq changes their lineup again, just add the
+# new model id to the TOP of this list — no other code changes needed.
+#
+# Verify current ids anytime at: https://console.groq.com/docs/models
+# ───────────────────────────────────────────────
+GROQ_MODEL_CANDIDATES = [
+    "llama-3.3-70b-versatile",
+    "llama-3.1-70b-versatile",
+    "llama-3.1-8b-instant",
+    "llama3-70b-8192",
+    "gemma2-9b-it",
+]
+
 
 @st.cache_resource(show_spinner="Initializing model...")
 def get_llm():
-    return ChatGroq(model="llama-3.3-70b-versatile", api_key=GROQ_API_KEY, temperature=0.2, max_tokens=2000)
+    last_error = None
+    for model_name in GROQ_MODEL_CANDIDATES:
+        try:
+            candidate = ChatGroq(
+                model=model_name,
+                api_key=GROQ_API_KEY,
+                temperature=0.2,
+                max_tokens=2000,
+            )
+            # Cheap ping to confirm the model id is actually live on this account.
+            candidate.invoke([HumanMessage(content="ping")])
+            return candidate, model_name
+        except Exception as e:
+            last_error = e
+            continue
+    # Nothing worked — surface a clear message instead of a raw traceback later.
+    st.error(
+        "❌ **Could not initialize any Groq model.**\n\n"
+        "All candidate models failed — this usually means your `GROQ_API_KEY` is invalid, "
+        "your account has no access to any chat models, or Groq is having an outage.\n\n"
+        f"**Last error:** `{last_error}`\n\n"
+        "Check [console.groq.com/docs/models](https://console.groq.com/docs/models) and your key at "
+        "[console.groq.com/keys](https://console.groq.com/keys)."
+    )
+    st.stop()
 
 
-llm = get_llm()
+llm, ACTIVE_MODEL_NAME = get_llm()
 
 # ───────────────────────────────────────────────
 # SHARED PDF LOADER
@@ -809,21 +825,14 @@ Do not merge bullets into a single paragraph.
 
 # ───────────────────────────────────────────────
 # MARKDOWN SAFETY NET
-# Some models still ignore formatting instructions and return bullets
-# separated by "•" with no real line breaks. This normalizes any response
-# into valid Markdown before rendering, regardless of what the model does.
 # ───────────────────────────────────────────────
 
 def normalize_markdown(text: str) -> str:
     if not text:
         return text
-    # Break inline bullets ("... • item • item") onto their own lines
     text = re.sub(r'\s*•\s*', '\n- ', text)
-    # If the model used "- " inline instead of "•", also split those
     text = re.sub(r'(?<!\n)(?<!^)\s(-\s)', r'\n\1', text)
-    # Ensure bold section headers (e.g. **Score**:) start a fresh paragraph
     text = re.sub(r'(?<!\n)\n?(\*\*[A-Za-z][^*\n]{0,60}\*\*:?)', r'\n\n\1', text)
-    # Collapse 3+ blank lines down to 2
     text = re.sub(r'\n{3,}', '\n\n', text)
     return text.strip()
 
@@ -849,7 +858,6 @@ def generate_cover_letter_pdf(text: str) -> bytes:
         para = para.strip()
         if not para:
             continue
-        # Escape XML special chars, then convert single newlines to <br/> for reportlab markup
         safe = para.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
         safe = safe.replace("\n", "<br/>")
         story.append(Paragraph(safe, body_style))
@@ -860,7 +868,7 @@ def generate_cover_letter_pdf(text: str) -> bytes:
     return buffer.getvalue()
 
 # ───────────────────────────────────────────────
-# BRIEF LOAD STATE (single subtle pass, not a splash screen)
+# BRIEF LOAD STATE
 # ───────────────────────────────────────────────
 if "booted" not in st.session_state:
     st.session_state.booted = False
@@ -883,7 +891,7 @@ if not st.session_state.booted:
 # ───────────────────────────────────────────────
 # MAIN UI — Hero panel
 # ───────────────────────────────────────────────
-st.markdown("""
+st.markdown(f"""
 <div class="hero-panel">
     <svg class="flight-trail" viewBox="0 0 820 90" preserveAspectRatio="none">
         <defs>
@@ -901,12 +909,12 @@ st.markdown("""
             <path d="M21.5 2.5L10.5 13.5" stroke="#C9A24B" stroke-width="1.1"/>
         </svg>
     </div>
-    <div class="eyebrow">RESUME GENIE · GROQ / LLAMA 3.3</div>
+    <div class="eyebrow">RESUME GENIE · GROQ / {ACTIVE_MODEL_NAME.upper()}</div>
     <div class="hero-title">Land the interview — not just the application.<br>Your resume, <span class="accent-word">engineered for every job</span>.</div>
     <div class="hero-sub">Tailored cover letters, honest ATS scoring, and a career coach that actually
     knows your background — one fast, focused workspace, powered by Groq.</div>
     <div class="hero-badges">
-        <div class="badge">MODEL · Llama 3.3 70B</div>
+        <div class="badge">MODEL · {ACTIVE_MODEL_NAME}</div>
         <div class="badge">LATENCY · Groq inference</div>
         <div class="badge">4 TOOLS · 1 WORKSPACE</div>
     </div>
@@ -951,24 +959,28 @@ if tool == "✉️ Cover Letter Generator":
             if uploaded_file:
                 if st.button("Generate cover letter", type="primary"):
                     loader_ph = scan_loader("EXTRACTING RESUME AND DRAFTING LETTER...")
-                    resume_text = extract_resume_text(uploaded_file)
-                    chain = COVER_LETTER_PROMPT | llm
-                    full_response = ""
-                    resp_container = st.empty()
-                    for chunk in chain.stream({"job_description": job_description, "resume_text": resume_text}):
-                        content = chunk.content if hasattr(chunk, "content") else str(chunk)
-                        full_response += content
-                        resp_container.markdown(full_response + "▌")
-                    resp_container.markdown(full_response)
-                    loader_ph.empty()
-                    verify_badge("Cover letter generated", "Matched against job description", "COMPLETE")
-                    pdf_bytes = generate_cover_letter_pdf(full_response)
-                    st.download_button(
-                        "Download as PDF",
-                        data=pdf_bytes,
-                        file_name="cover_letter.pdf",
-                        mime="application/pdf"
-                    )
+                    try:
+                        resume_text = extract_resume_text(uploaded_file)
+                        chain = COVER_LETTER_PROMPT | llm
+                        full_response = ""
+                        resp_container = st.empty()
+                        for chunk in chain.stream({"job_description": job_description, "resume_text": resume_text}):
+                            content = chunk.content if hasattr(chunk, "content") else str(chunk)
+                            full_response += content
+                            resp_container.markdown(full_response + "▌")
+                        resp_container.markdown(full_response)
+                        loader_ph.empty()
+                        verify_badge("Cover letter generated", "Matched against job description", "COMPLETE")
+                        pdf_bytes = generate_cover_letter_pdf(full_response)
+                        st.download_button(
+                            "Download as PDF",
+                            data=pdf_bytes,
+                            file_name="cover_letter.pdf",
+                            mime="application/pdf"
+                        )
+                    except Exception as e:
+                        loader_ph.empty()
+                        model_error_box(e)
 
 # ───────────────────────────────────────────────
 # TOOL 2: RESUME SCORER/MATCHER
@@ -993,12 +1005,16 @@ elif tool == "📊 Resume-JD Matcher":
                 verify_badge("Resume loaded", uploaded_file.name, "READY")
                 if st.button("Score match", type="primary"):
                     loader_ph = scan_loader("ANALYZING MATCH · TYPICALLY 30–60S...")
-                    context = extract_resume_text(uploaded_file)
-                    prompt = RESUME_SCORER_PROMPT.format(job_description=job_description, context=context)
-                    response = llm.invoke(prompt)
-                    loader_ph.empty()
-                    st.markdown("### Analysis result")
-                    st.markdown(normalize_markdown(response.content))
+                    try:
+                        context = extract_resume_text(uploaded_file)
+                        prompt = RESUME_SCORER_PROMPT.format(job_description=job_description, context=context)
+                        response = llm.invoke(prompt)
+                        loader_ph.empty()
+                        st.markdown("### Analysis result")
+                        st.markdown(normalize_markdown(response.content))
+                    except Exception as e:
+                        loader_ph.empty()
+                        model_error_box(e)
 
 # ───────────────────────────────────────────────
 # TOOL 3: RESUME CHECKER
@@ -1010,13 +1026,17 @@ elif tool == "🔍 Resume Checker":
 
         if uploaded_file and st.button("Evaluate resume", type="primary"):
             loader_ph = scan_loader("RUNNING EVALUATION...")
-            context = extract_resume_text(uploaded_file)
-            chain = RESUME_CHECKER_PROMPT | llm
-            response = chain.invoke({"context": context})
-            loader_ph.empty()
-            verify_badge("Evaluation complete", uploaded_file.name, "COMPLETE")
-            st.markdown("### Detailed evaluation")
-            st.markdown(normalize_markdown(response.content))
+            try:
+                context = extract_resume_text(uploaded_file)
+                chain = RESUME_CHECKER_PROMPT | llm
+                response = chain.invoke({"context": context})
+                loader_ph.empty()
+                verify_badge("Evaluation complete", uploaded_file.name, "COMPLETE")
+                st.markdown("### Detailed evaluation")
+                st.markdown(normalize_markdown(response.content))
+            except Exception as e:
+                loader_ph.empty()
+                model_error_box(e)
 
 # ───────────────────────────────────────────────
 # TOOL 4: CAREER COACH CHAT
@@ -1024,7 +1044,6 @@ elif tool == "🔍 Resume Checker":
 elif tool == "💬 Career Coach Chat":
     st.header("Career Coach Chatbot")
 
-    # Resume upload (session-persisted)
     if "resume_context" not in st.session_state:
         st.session_state.resume_context = None
         st.session_state.chat_history = []
@@ -1041,7 +1060,6 @@ elif tool == "💬 Career Coach Chat":
         st.warning("Upload your resume to start chatting.")
         st.stop()
 
-    # Layout: Left=Resume | Right=Chat
     left_col, right_col = st.columns([1, 1])
 
     with left_col:
@@ -1055,33 +1073,37 @@ elif tool == "💬 Career Coach Chat":
             st.subheader("Career Coach")
             system_msg = SystemMessage(content=f"""You are a career coach. Use this resume: {st.session_state.resume_context}""")
 
-            # Chat history
             for msg in st.session_state.chat_history:
                 role = "user" if isinstance(msg, HumanMessage) else "assistant"
                 with st.chat_message(role):
                     st.markdown(msg.content)
 
-            # Chat input
             if prompt := st.chat_input("Ask about career, resume, interviews..."):
                 st.session_state.chat_history.append(HumanMessage(content=prompt))
                 with st.chat_message("assistant"):
                     messages = [system_msg] + st.session_state.chat_history
                     resp_container = st.empty()
                     full_resp = ""
-                    for chunk in llm.stream(messages):
-                        full_resp += chunk.content
-                        resp_container.markdown(full_resp + "▌")
-                    resp_container.markdown(full_resp)
-                st.session_state.chat_history.append(AIMessage(content=full_resp))
+                    try:
+                        for chunk in llm.stream(messages):
+                            full_resp += chunk.content
+                            resp_container.markdown(full_resp + "▌")
+                        resp_container.markdown(full_resp)
+                        st.session_state.chat_history.append(AIMessage(content=full_resp))
+                    except Exception as e:
+                        resp_container.empty()
+                        model_error_box(e)
+                        # Drop the unanswered user message so the chat doesn't get stuck
+                        st.session_state.chat_history.pop()
                 st.rerun()
 
 # ───────────────────────────────────────────────
 # FOOTER
 # ───────────────────────────────────────────────
-st.markdown("""
+st.markdown(f"""
 <div class="genie-footer">
     <span class="footer-item">STATUS · All tools live</span>
-    <span class="footer-item">MODEL · Groq / Llama 3.3</span>
+    <span class="footer-item">MODEL · Groq / {ACTIVE_MODEL_NAME}</span>
     <span class="footer-item">BUILD · Jan 2026 · BISWAJIT PATTANAIK</span>
 </div>
 """, unsafe_allow_html=True)
