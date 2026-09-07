@@ -680,14 +680,15 @@ if not GROQ_API_KEY:
 # actually responds. If Groq changes their lineup again, just add the
 # new model id to the TOP of this list — no other code changes needed.
 #
-# Verify current ids anytime at: https://console.groq.com/docs/models
+# Last verified live: Sep 2026. Verify current ids anytime at:
+# https://console.groq.com/docs/models — or call
+# GET https://api.groq.com/openai/v1/models with your key.
 # ───────────────────────────────────────────────
 GROQ_MODEL_CANDIDATES = [
     "llama-3.3-70b-versatile",
-    "llama-3.1-70b-versatile",
-    "llama-3.1-8b-instant",
-    "llama3-70b-8192",
-    "gemma2-9b-it",
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b",
+    "qwen/qwen3-32b",
 ]
 
 
